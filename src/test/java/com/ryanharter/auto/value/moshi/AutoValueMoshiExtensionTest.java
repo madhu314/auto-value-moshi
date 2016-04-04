@@ -53,11 +53,12 @@ public class AutoValueMoshiExtensionTest {
             + "package test;\n"
             + "import com.squareup.moshi.Json;\n"
             + "import com.ryanharter.auto.value.moshi.SerializedName;\n"
+            + "import com.ryanharter.auto.value.moshi.MoshiExtension;\n"
             + "import com.ryanharter.auto.value.moshi.Nullable;\n"
             + "import com.google.auto.value.AutoValue;\n"
             + "import java.util.Map;\n"
             + "import java.util.Set;\n"
-            + "@AutoValue public abstract class Test {\n"
+            + "@AutoValue @MoshiExtension public abstract class Test {\n"
             // Reference type
             + "public abstract String a();\n"
             // Array type
@@ -230,7 +231,8 @@ public class AutoValueMoshiExtensionTest {
     JavaFileObject source = JavaFileObjects.forSourceString("test.Test", ""
         + "package test;\n"
         + "import com.google.auto.value.AutoValue;\n"
-        + "@AutoValue public abstract class Test {\n"
+        + "import com.ryanharter.auto.value.moshi.MoshiExtension;\n"
+        + "@AutoValue @MoshiExtension public abstract class Test {\n"
         + "  public abstract String getName();\n"
         + "  public abstract boolean isAwesome();\n"
         + "}"

@@ -87,7 +87,8 @@ public class AutoValueMoshiExtension extends AutoValueExtension {
 
   @Override
   public boolean applicable(Context context) {
-    return true;
+      return context.autoValueClass().getAnnotation(MoshiExtension.class)
+              != null;
   }
 
   @Override
