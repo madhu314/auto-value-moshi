@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'maven-publish'
 apply plugin: 'maven'
 
-group = 'com.github.madz314'
+group = 'com.github.madhu314'
 
 
 sourceCompatibility = 1.7
